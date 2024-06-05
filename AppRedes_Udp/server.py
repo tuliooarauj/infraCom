@@ -1,7 +1,7 @@
 from socket import socket, AF_INET, SOCK_DGRAM
 from threading import Thread
 
-def handle_clientRequest():
+def handle_clientRequest(mserver_socket):
     for j in range(3):
         message, client_adress = server_socket.recvfrom(2048)
         req = message.decode()
